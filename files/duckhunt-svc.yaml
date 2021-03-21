@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: duckhunt-js
+    app.kubernetes.io/component: duckhunt-js
+    app.kubernetes.io/instance: duckhunt-js
+  name: duckhunt-js
+  namespace: default
+spec:
+  ports:
+  - name: 8080-tcp
+    port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    deployment: duckhunt-js
+  sessionAffinity: None
+  type: ClusterIP

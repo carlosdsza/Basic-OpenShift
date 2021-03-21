@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  gather_facts: no
+  tasks:
+    - name: Create a k8s service from file
+      kubernetes.core.k8s:
+         state: present
+         kubeconfig: /root/kubeconfig
+         src: files/duckhunt-svc.yaml

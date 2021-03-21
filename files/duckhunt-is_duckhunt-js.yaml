@@ -1,0 +1,12 @@
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  labels:
+    app: duckhunt-js
+    app.kubernetes.io/component: duckhunt-js
+    app.kubernetes.io/instance: duckhunt-js
+  name: duckhunt-js
+  namespace: default
+spec:
+  lookupPolicy:
+    local: false

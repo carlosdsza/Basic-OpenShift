@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  gather_facts: no
+  tasks:
+    - name: Create a k8s imagstream from file
+      kubernetes.core.k8s:
+         state: present
+         kubeconfig: /root/kubeconfig
+         src: files/duckhunt-is_centos7-s2i-nodejs.yaml

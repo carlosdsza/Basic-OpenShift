@@ -1,0 +1,17 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  annotations:
+    app: duckhunt-js
+    app.kubernetes.io/component: duckhunt-js
+    app.kubernetes.io/instance: duckhunt-js
+  name: duckhunt-js
+  namespace: default
+spec:
+  port:
+    targetPort: 8080-tcp
+  to:
+    kind: Service
+    name: duckhunt-js
+    weight: 100
+  wildcardPolicy: None
