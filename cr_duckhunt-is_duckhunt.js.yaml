@@ -5,5 +5,5 @@
     - name: Create a k8s imagstream from file
       kubernetes.core.k8s:
          state: present
-         kubeconfig: /root/kubeconfig
+         kubeconfig: kube/kubeconfig
          src: files/duckhunt-is_duckhunt-js.yaml
