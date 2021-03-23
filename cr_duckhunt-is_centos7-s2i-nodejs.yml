@@ -1,13 +1,11 @@
 ---
 - hosts: localhost
   gather_facts: no
-  become: false
-  vars_files:
-    - vars/kubeconfig.yaml
 
   tasks:
     - name: Create a k8s imagstream from file
       kubernetes.core.k8s:
          state: present
-         kubeconfig: "{{ K8S_AUTH_KUBECONFIG }}"
+         api_key: sha256~Q1VebH2IaqQq8cAHV9cAMP3O0WAxGTGaGxeiLIqPLTE
+         # kubeconfig: kube/kubeconfig
          src: files/duckhunt-is_centos7-s2i-nodejs.yaml
