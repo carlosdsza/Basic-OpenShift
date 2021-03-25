@@ -25,7 +25,7 @@ spec:
         deployment: duckhunt-js
     spec:
       containers:
-      - image: image-registry.openshift-image-registry.svc:5000/default/duckhunt-js@sha256:e4d52b67b4f918f6577022296a10c5d6705c894133d82548249355fa62647680
+      - image: image-registry.openshift-image-registry.svc:5000/default/duckhunt-js
         imagePullPolicy: IfNotPresent
         name: duckhunt-js
         ports:
