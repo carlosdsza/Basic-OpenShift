@@ -3,8 +3,7 @@
   gather_facts: no
 
   tasks:
-    - name: Create a k8s imagstream from file
+    - name: Create a k8s imagestream from file
       kubernetes.core.k8s:
          state: present
-         kubeconfig: kube/kubeconfig.json
          src: files/duckhunt-is_centos7-s2i-nodejs.yaml
