@@ -5,5 +5,4 @@
     - name: Create a k8s route from file
       kubernetes.core.k8s:
          state: present
-         kubeconfig: kube/kubeconfig
          src: files/duckhunt-route.yaml
